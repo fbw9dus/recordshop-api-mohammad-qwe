@@ -10,6 +10,7 @@ const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const recordsRouter = require("./routes/records");
 const ordersRouter = require("./routes/orders");
+const animalRouter = require('./routes/animals')
 const { setCors } = require("./middleware/security");
 
 /** INIT */
@@ -46,6 +47,7 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/records", recordsRouter);
 app.use("/orders", ordersRouter);
+app.use('/animals', animalRouter)
 
 /** ERROR HANDLING */
 /*app.use(function(req, res, next) {
