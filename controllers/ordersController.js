@@ -23,7 +23,7 @@ exports.deleteOrder = (req, res, next) => {
 
 exports.updateOrder =async (req, res, next) => {
   const { id } = req.params;
-  const dt = req.body;
+  const data = req.body;
   // Schreib hier code um die Bestellung mit der id aus params in der orders-Collection mit den Daten aus req.body zu aktualisieren
   var order = await orderModel.findByIdAndUpdate(id, data, {new: true})
   res.status(200).send(order);
@@ -36,3 +36,4 @@ exports.addOrder = async (req, res, next) => {
    await  order.save()
   res.status(200).send(order);
 };
+
