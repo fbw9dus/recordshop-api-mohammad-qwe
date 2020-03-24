@@ -32,6 +32,7 @@ exports.addUser = async (req, res, next) => {
   const userData = req.body;
   // Schreib hier code um die Daten des neuen Kunden aus req.body in der users-Collection zu speichern
   
-  const user =await new User(userData)
+  const user = new User(userData)
+  await user.save()
   res.status(200).send(user);
 };
