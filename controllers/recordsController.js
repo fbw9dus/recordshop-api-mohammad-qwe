@@ -8,7 +8,7 @@ exports.getRecords = async (req, res, next) => {
 };
 
 exports.getRecord =async (req, res, next) => {
-  const { id } = req.params;
+  const { id } = req.params.id;
 
   // Schreib hier code um das record mit der id aus params aus der records-Collection zu holen
 var record = await Record.findById(id)
@@ -16,7 +16,7 @@ var record = await Record.findById(id)
 };
 
 exports.deleteRecord =async (req, res, next) => {
-  const { id } = req.params;
+  const { id } = req.params.id;
 
   // Schreib hier code um das record mit der id aus params aus der records-Collection zu löschen
 var record = await Record.findByIdAndDelete(id)
@@ -24,7 +24,7 @@ var record = await Record.findByIdAndDelete(id)
 };
 
 exports.updateRecord =async (req, res, next) => {
-  const { id } = req.params;
+  const { id } = req.params.id;
 
   const dt = req.body;
   // Schreib hier code um das record mit der id aus params in der records-Collection mit den Daten aus req.body zu aktualisieren
