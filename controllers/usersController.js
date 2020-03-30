@@ -1,4 +1,6 @@
 const {  validationResult } = require('express-validator');
+const User = require('../models/User');
+
 
 exports.getUsers = async (req, res, next) => {
   // Schreib hier code um alle Kunden aus der users-Collection zu holen
