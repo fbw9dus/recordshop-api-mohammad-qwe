@@ -6,7 +6,6 @@ const router = express.Router();
 //const db = low(adapter);
 const {userValidationRules} = require('../lib/validation/userRules');
 const {validateInputs} = require('./../lib/validation/middleware/validateInputs')
-
 const {
   getUsers,
   getUser,
