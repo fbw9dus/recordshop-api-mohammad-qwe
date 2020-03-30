@@ -44,6 +44,4 @@ exports.addUser =  async (req, res, next) => {
   var newUser = new Users(user)
   await newUser.save()
   res.status(200).send(newUser);
-  next()
-
 };
